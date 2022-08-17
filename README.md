@@ -10,9 +10,17 @@ Creación, puesta en marcha y coordinación de hilos.
 
 1. Revise el programa “primos concurrentes” (en la carpeta parte1), dispuesto en el paquete edu.eci.arsw.primefinder. Este es un programa que calcula los números primos entre dos intervalos, distribuyendo la búsqueda de los mismos entre hilos independientes. Por ahora, tiene un único hilo de ejecución que busca los primos entre 0 y 30.000.000. Ejecútelo, abra el administrador de procesos del sistema operativo, y verifique cuantos núcleos son usados por el mismo.
 
+![image](https://user-images.githubusercontent.com/25957863/185158734-dc58078d-952a-4b19-94ec-bccc8b8b2449.png)
+
+![image](https://user-images.githubusercontent.com/25957863/185158747-b0bcda57-8a27-4fa7-81bf-090b0579e2fe.png)
+
+![image](https://user-images.githubusercontent.com/25957863/185158784-a399b432-6bb2-46c0-97a9-a05470c8f153.png)
+
+Al ejecutar el buscador de números primos con un solo hilo vemos que el tiempo de ejecución del mismo es de 49.582 segundos. Y que se ocupa el 56% de la capacidad de procesamiento de la CPU. Es un proceso que no se está ejecutando concurrentemente con más hilos pero si concurrentemente con los procesos del ordenador por lo tanto vemos que el tiempo de espera es considerable.
+
 2. Modifique el programa para que, en lugar de resolver el problema con un solo hilo, lo haga con tres, donde cada uno de éstos hará la tarcera parte del problema original. Verifique nuevamente el funcionamiento, y nuevamente revise el uso de los núcleos del equipo.
 
-4. Lo que se le ha pedido es: debe modificar la aplicación de manera que cuando hayan transcurrido 5 segundos desde que se inició la ejecución, se detengan todos los hilos y se muestre el número de primos encontrados hasta el momento. Luego, se debe esperar a que el usuario presione ENTER para reanudar la ejecución de los mismo.
+3. Lo que se le ha pedido es: debe modificar la aplicación de manera que cuando hayan transcurrido 5 segundos desde que se inició la ejecución, se detengan todos los hilos y se muestre el número de primos encontrados hasta el momento. Luego, se debe esperar a que el usuario presione ENTER para reanudar la ejecución de los mismo.
 
 
 
@@ -75,6 +83,4 @@ Taller.
     
     2.2. Los galgos, cuando están suspendidos, son reactivados son sólo un llamado (usando un monitor común).
 
-#� �L�A�B�2�-�A�R�S�W�-�
-�
-�
+
