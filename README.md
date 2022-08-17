@@ -22,6 +22,8 @@ Tiempo de ejecución:
 
 ![image](https://user-images.githubusercontent.com/25957863/185159501-99a8306a-c1db-4ed3-a452-9831dff28bc4.png)
 
+# Análisis:
+
 Al ejecutar el buscador de números primos con un solo hilo vemos que el tiempo de ejecución del mismo es de 49.582 segundos. Y que se ocupa el 56% de la capacidad de procesamiento de la CPU. Es un proceso que no se está ejecutando concurrentemente con más hilos pero si concurrentemente con los procesos del ordenador por lo tanto vemos que el tiempo de espera es considerable. Los picos en las gráficas del administrador de procesos se deben a la regulación y optimización de recursos que realiza la CPU en la ejecución de un proceso determinado. 
 
 2. Modifique el programa para que, en lugar de resolver el problema con un solo hilo, lo haga con tres, donde cada uno de éstos hará la tarcera parte del problema original. Verifique nuevamente el funcionamiento, y nuevamente revise el uso de los núcleos del equipo.
@@ -37,6 +39,8 @@ Administrador de procesos del sistema operativo:
 Tiempo de ejecución:
 
 ![image](https://user-images.githubusercontent.com/25957863/185160125-40bf4c3e-94ca-418a-92dd-4b179c9e23a7.png)
+
+# Análisis:
 
 Al ejecutar el buscador de números primos con un tres hilos vemos que el tiempo de ejecución del mismo es de 53.825 segundos. Y que se ocupa el 60% de la capacidad de procesamiento de la CPU. Es un proceso que se está ejecutando concurrentemente con varios hilos y además con los procesos internos del ordenador por lo tanto vemos que el tiempo de espera es mayor que en el apartado anterior. Por otro lado con la La velocidad de reloj (Speed) se mide la cantidad de ciclos que ejecuta la CPU por segundo; para los apartados uno (un hilo) y dos (tres hilos) la velocidad fue la misma (3.68GHz).
 
