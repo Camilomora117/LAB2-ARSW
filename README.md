@@ -9,18 +9,18 @@ Arquitecturas de Software – ARSW
 Creación, puesta en marcha y coordinación de hilos.
 
 1. Revise el programa “primos concurrentes” (en la carpeta parte1), dispuesto en el paquete edu.eci.arsw.primefinder. Este es un programa que calcula los números primos entre dos intervalos, distribuyendo la búsqueda de los mismos entre hilos independientes. Por ahora, tiene un único hilo de ejecución que busca los primos entre 0 y 30.000.000. Ejecútelo, abra el administrador de procesos del sistema operativo, y verifique cuantos núcleos son usados por el mismo.
+
 Código:
 
-![image](https://user-images.githubusercontent.com/25957863/185158734-dc58078d-952a-4b19-94ec-bccc8b8b2449.png)
+![image](https://user-images.githubusercontent.com/25957863/185159401-daf00445-416f-4a96-af39-8ba22032e6e9.png)
 
 Administrador de procesos del sistema operativo:
 
-![image](https://user-images.githubusercontent.com/25957863/185158747-b0bcda57-8a27-4fa7-81bf-090b0579e2fe.png)
+![image](https://user-images.githubusercontent.com/25957863/185159442-5fabea7c-cfb2-4c3f-9a87-1790c26774f6.png)
 
 Tiempo de ejecución:
 
-![image](https://user-images.githubusercontent.com/25957863/185158784-a399b432-6bb2-46c0-97a9-a05470c8f153.png)
-
+![image](https://user-images.githubusercontent.com/25957863/185159501-99a8306a-c1db-4ed3-a452-9831dff28bc4.png)
 Al ejecutar el buscador de números primos con un solo hilo vemos que el tiempo de ejecución del mismo es de 49.582 segundos. Y que se ocupa el 56% de la capacidad de procesamiento de la CPU. Es un proceso que no se está ejecutando concurrentemente con más hilos pero si concurrentemente con los procesos del ordenador por lo tanto vemos que el tiempo de espera es considerable.
 
 2. Modifique el programa para que, en lugar de resolver el problema con un solo hilo, lo haga con tres, donde cada uno de éstos hará la tarcera parte del problema original. Verifique nuevamente el funcionamiento, y nuevamente revise el uso de los núcleos del equipo.
