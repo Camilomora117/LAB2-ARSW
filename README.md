@@ -21,13 +21,26 @@ Administrador de procesos del sistema operativo:
 Tiempo de ejecución:
 
 ![image](https://user-images.githubusercontent.com/25957863/185159501-99a8306a-c1db-4ed3-a452-9831dff28bc4.png)
+
 Al ejecutar el buscador de números primos con un solo hilo vemos que el tiempo de ejecución del mismo es de 49.582 segundos. Y que se ocupa el 56% de la capacidad de procesamiento de la CPU. Es un proceso que no se está ejecutando concurrentemente con más hilos pero si concurrentemente con los procesos del ordenador por lo tanto vemos que el tiempo de espera es considerable.
 
 2. Modifique el programa para que, en lugar de resolver el problema con un solo hilo, lo haga con tres, donde cada uno de éstos hará la tarcera parte del problema original. Verifique nuevamente el funcionamiento, y nuevamente revise el uso de los núcleos del equipo.
 
+Código:
+
+![image](https://user-images.githubusercontent.com/25957863/185159922-4f646a38-0983-4835-955e-06546e8a86e4.png)
+
+Administrador de procesos del sistema operativo:
+
+![image](https://user-images.githubusercontent.com/25957863/185160068-7db78479-86b7-480d-a04d-1b5b119faf16.png)
+
+Tiempo de ejecución:
+
+![image](https://user-images.githubusercontent.com/25957863/185160125-40bf4c3e-94ca-418a-92dd-4b179c9e23a7.png)
+
+Al ejecutar el buscador de números primos con un tres hilos vemos que el tiempo de ejecución del mismo es de 53.825 segundos. Y que se ocupa el 60% de la capacidad de procesamiento de la CPU. Es un proceso que se está ejecutando concurrentemente con varios hilos y además con los procesos internos del ordenador por lo tanto vemos que el tiempo de espera es mayor que en el apartado anterior.
+
 3. Lo que se le ha pedido es: debe modificar la aplicación de manera que cuando hayan transcurrido 5 segundos desde que se inició la ejecución, se detengan todos los hilos y se muestre el número de primos encontrados hasta el momento. Luego, se debe esperar a que el usuario presione ENTER para reanudar la ejecución de los mismo.
-
-
 
 #####Parte II 
 
