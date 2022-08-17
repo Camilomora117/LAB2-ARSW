@@ -13,9 +13,11 @@ public class Main {
 		Date startDate, endDate;
 		int seconds=0;
 
+		//Creamos una lista para almacenar los Threads
 		LinkedList<PrimeFinderThread> primeFinderThreads = new LinkedList<>();
 		startDate = new Date();
 
+		//Creamos y almacenamos los Threads
 		PrimeFinderThread pft1=new PrimeFinderThread(0, 10000000, "Thread 1");
 		primeFinderThreads.add(pft1);
 
@@ -25,6 +27,7 @@ public class Main {
 		PrimeFinderThread pft3= new PrimeFinderThread(20000000, 30000000, "Thread 3");
 		primeFinderThreads.add(pft3);
 
+		//Iniciamos los Threads
 		for(PrimeFinderThread thread:primeFinderThreads){
 			thread.start();
 		}
