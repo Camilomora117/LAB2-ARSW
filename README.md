@@ -87,6 +87,10 @@ Cómo podemos observar algunas de las inconsistencias es que algunas veces vario
 
 Esto es un problema de sincronización.
 
+### Por lo tanto encontramos las siguientes regiones criticas:
+![image](https://user-images.githubusercontent.com/98135134/185422800-3dc7e6bd-d326-47e8-93de-e63d9a21b8ae.png)
+
+Ya que estas son las funciones donde el programa tiene los conflictos para desidir el ganador.
 
 3.  Utilice un mecanismo de sincronización para garantizar que a dichas
     regiones críticas sólo acceda un hilo a la vez. Verifique los
