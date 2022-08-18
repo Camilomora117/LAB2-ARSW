@@ -80,6 +80,13 @@ Taller.
     podrían salir resultados válidos, pero en otros se pueden presentar
     dichas inconsistencias). A partir de esto, identifique las regiones
     críticas () del programa.
+    
+Cómo podemos observar algunas de las inconsistencias es que algunas veces varios galgos llegan en la primera posicion, pero solo uno se muestra cómo el ganador.
+    
+![image](https://user-images.githubusercontent.com/98135134/185421239-e88762e2-7418-47a9-ae03-a5a9d4f3e162.png)
+
+Esto es un problema de sincronización.
+
 
 3.  Utilice un mecanismo de sincronización para garantizar que a dichas
     regiones críticas sólo acceda un hilo a la vez. Verifique los
