@@ -36,10 +36,18 @@ public class MainCanodromo {
                                     galgos[i] = new Galgo(can.getCarril(i), "" + i, reg);
                                     //inicia los hilos
                                     galgos[i].start();
-
                                 }
-                               
-				can.winnerDialog(reg.getGanador(),reg.getUltimaPosicionAlcanzada() - 1); 
+
+                                //Usamos el metodo join para que el hilo principal sea el ultimo que se detenga
+                                for(int i=0; i<can.getNumCarriles(); i++) {
+                                    try {
+                                        galgos[i].join();
+                                    } catch (InterruptedException e) {
+                                        System.out.println(e.getMessage());
+                                    }
+                                }
+
+				                can.winnerDialog(reg.getGanador(),reg.getUltimaPosicionAlcanzada() - 1);
                                 System.out.println("El ganador fue:" + reg.getGanador());
                             }
                         }.start();

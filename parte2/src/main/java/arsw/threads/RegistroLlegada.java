@@ -21,7 +21,5 @@ public class RegistroLlegada {
 	public void setUltimaPosicionAlcanzada(int ultimaPosicionAlcanzada) {
 		this.ultimaPosicionAlcanzada = ultimaPosicionAlcanzada;
 	}
-
-	
 	
 }
