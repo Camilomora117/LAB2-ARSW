@@ -105,6 +105,10 @@ public class Carril {
 		llegada.setText("!");
 	}
 
+	/**
+	 * Metodo que muestra los pasos de los galgos
+	 * @param n numero de pasos
+	 */
 	public void displayPasos(int n) {
 		llegada.setText("" + n);
 	}

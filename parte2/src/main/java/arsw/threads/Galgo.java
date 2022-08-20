@@ -12,6 +12,12 @@ public class Galgo extends Thread {
 	RegistroLlegada regl;
 	private boolean stop;
 
+	/**
+	 * Constructor
+	 * @param carril Carril
+	 * @param name nombre del galgo
+	 * @param reg registro de llegada
+	 */
 	public Galgo(Carril carril, String name, RegistroLlegada reg) {
 		super(name);
 		this.carril = carril;
@@ -20,6 +26,10 @@ public class Galgo extends Thread {
 		this.stop = false;
 	}
 
+	/**
+	 * Funcion que pone a correr el galgo
+	 * @throws InterruptedException
+	 */
 	public void corra() throws InterruptedException {
 		while (paso < carril.size()) {			
 			Thread.sleep(100);
@@ -47,6 +57,10 @@ public class Galgo extends Thread {
 		}
 	}
 
+	/**
+	 * Metodo que pausa el galgo
+	 * @param stop boolean
+	 */
 	public synchronized void stop(boolean stop) {
 		this.stop = stop;
 
