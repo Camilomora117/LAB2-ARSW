@@ -47,7 +47,7 @@ public class MainCanodromo {
                                     }
                                 }
 
-				                can.winnerDialog(reg.getGanador(),reg.getUltimaPosicionAlcanzada() - 1);
+                                can.winnerDialog(reg.getGanador(),reg.getUltimaPosicionAlcanzada() - 1);
                                 System.out.println("El ganador fue:" + reg.getGanador());
                             }
                         }.start();
@@ -61,6 +61,10 @@ public class MainCanodromo {
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         System.out.println("Carrera pausada!");
+
+                        for(int i=0; i<can.getNumCarriles(); i++) {
+                            galgos[i].stop(true);
+                        }
                     }
                 }
         );
