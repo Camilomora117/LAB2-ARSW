@@ -95,6 +95,10 @@ Ya que estas son las funciones donde el programa tiene los conflictos para elegi
 3.  Utilice un mecanismo de sincronización para garantizar que a dichas
     regiones críticas sólo acceda un hilo a la vez. Verifique los
     resultados.
+    
+![image](https://user-images.githubusercontent.com/98135134/185768411-242f2269-d652-4c21-9a90-0a6f46613bfa.png)
+
+En las zonas de riesgo usamos syncronized, esto permite que solamente un proceso pueda acceder a la vez a estos metodos.
 
 4.  Implemente las funcionalidades de pausa y continuar. Con estas,
     cuando se haga clic en ‘Stop’, todos los hilos de los galgos
