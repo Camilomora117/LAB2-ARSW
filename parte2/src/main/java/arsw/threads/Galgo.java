@@ -33,26 +33,23 @@ public class Galgo extends Thread {
 	public void corra() throws InterruptedException {
 		while (paso < carril.size()) {			
 			Thread.sleep(100);
-
 			//Usamos esta funcion para pausar el juego
 			synchronized(this) {
 				while(stop) {
 					this.wait();
 				}
 			}
-
 			carril.setPasoOn(paso++);
 			carril.displayPasos(paso);
-			
-			if (paso == carril.size()) {						
-				carril.finish();
-				int ubicacion=regl.getUltimaPosicionAlcanzada();
-				regl.setUltimaPosicionAlcanzada(ubicacion+1);
-				System.out.println("El galgo "+this.getName()+" llego en la posicion "+ubicacion);
-				if (ubicacion==1){
-					regl.setGanador(this.getName());
+			synchronized(this) {
+				if (paso == carril.size()) {
+					int ubicacion=regl.getUltimaPosicionAlcanzada();
+					regl.setUltimaPosicionAlcanzada(ubicacion+1);
+					System.out.println("El galgo "+this.getName()+" llego en la posicion "+ubicacion);
+					if (ubicacion==1){
+						regl.setGanador(this.getName());
+					}
 				}
-				
 			}
 		}
 	}
@@ -63,7 +60,6 @@ public class Galgo extends Thread {
 	 */
 	public synchronized void stop(boolean stop) {
 		this.stop = stop;
-
 		if(!stop) {
 			this.notifyAll();
 		}
